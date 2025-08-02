@@ -50,9 +50,10 @@ def parse_date_jp(text):
 
 def main():
     # 테스트용 고정 날짜 (여기서 날짜 바꿔서 테스트 가능)
-    target_date = date(2025, 8, 1)
+    target_date = date.today()
     # 실제 자동화 시에는 아래처럼 현재 날짜로 사용
     # target_date = date.today()
+    #  target_date = date(2025, 8, 1)
 
     url = "https://www.ohtashp.com/topics/takarakuji/loto7/"
     res = requests.get(url)
