@@ -40,13 +40,9 @@ def create_github_issue(title, body):
 
 def parse_date_jp(text):
     """
-    'YYYY/M/D' 형식의 일본 날짜를 datetime.date로 변환 (예: '2025/8/1')
+    테스트용: 항상 2025년 8월 1일을 반환
     """
-    try:
-        dt = datetime.strptime(text, "%Y/%m/%d").date()
-        return dt
-    except:
-        return None
+    return date(2025, 8, 1)
 
 def main():
     target_date = date.today()  # 워크플로우 실행일 기준으로
