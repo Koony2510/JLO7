@@ -40,12 +40,20 @@ def create_github_issue(title, body):
 
 def parse_date_jp(text):
     """
-    테스트용: 항상 2025년 8월 1일을 반환
+    'YYYY/M/D' 형식의 일본 날짜를 datetime.date로 변환 (예: '2025/8/1')
     """
-    return date(2025, 8, 1)
+    try:
+        dt = datetime.strptime(text, "%Y/%m/%d").date()
+        return dt
+    except:
+        return None
 
 def main():
-    target_date = date.today()  # 워크플로우 실행일 기준으로
+    # 테스트용 고정 날짜 (여기서 날짜 바꿔서 테스트 가능)
+    target_date = date(2025, 8, 1)
+    # 실제 자동화 시에는 아래처럼 현재 날짜로 사용
+    # target_date = date.today()
+
     url = "https://www.ohtashp.com/topics/takarakuji/loto7/"
     res = requests.get(url)
     soup = BeautifulSoup(res.text, 'html.parser')
