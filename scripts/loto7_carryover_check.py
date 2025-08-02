@@ -56,6 +56,7 @@ def main():
 
     url = "https://www.ohtashp.com/topics/takarakuji/loto7/"
     res = requests.get(url)
+    res.encoding = 'utf-8'  # 인코딩 명시 추가
     soup = BeautifulSoup(res.text, 'html.parser')
 
     # 테이블 찾기 (추첨 데이터가 담긴 테이블)
