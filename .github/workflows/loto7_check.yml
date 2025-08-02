@@ -5,6 +5,10 @@ on:
     - cron: '0 13 * * 5'  # 매주 금요일 22시 KST (UTC+9 -> 13시 UTC)
   workflow_dispatch:  # 수동 실행도 가능하게
 
+permissions:
+  issues: write
+  contents: read
+
 jobs:
   check_carryover:
     runs-on: ubuntu-latest
