@@ -51,7 +51,7 @@ def parse_date_jp(text):
 
 def main():
     # 🎯 테스트용 고정 날짜 (예: 2025년 8월 2일)
-    target_date = date(2025, 4, 25)
+    target_date = date.today()
     # target_date = date(2025, 8, 2)  # 테스트용 고정값
     # target_date =  date.today()
     
