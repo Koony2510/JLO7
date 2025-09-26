@@ -2,7 +2,7 @@ name: Keep Repository Active
 
 on:
   schedule:
-    - cron: "0 10 */2 * *"   # 약 50일마다 실행 (UTC 15:00 ≈ 한국시간 자정쯤)
+    - cron: "0 10 */1 * *"   # 약 50일마다 실행 (UTC 15:00 ≈ 한국시간 자정쯤)
   workflow_dispatch:           # 필요할 때 수동 실행도 가능
 
 permissions:
